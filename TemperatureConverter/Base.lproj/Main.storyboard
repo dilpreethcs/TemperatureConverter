@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ERj-W7-dbI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ERj-W7-dbI">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -43,7 +43,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AGC-P6-2WV">
-                                <rect key="frame" x="218" y="28" width="165" height="84"/>
+                                <rect key="frame" x="28" y="28" width="544" height="84"/>
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
@@ -56,7 +56,7 @@
                         <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="AGC-P6-2WV" secondAttribute="trailing" constant="8" id="1xn-xe-oRb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AGC-P6-2WV" secondAttribute="trailing" constant="8" id="1xn-xe-oRb"/>
                             <constraint firstItem="7Xf-Vs-Y4X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="33U-4j-9I4"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="rgr-cw-9HO" secondAttribute="trailing" constant="8" id="Cev-j9-XuM"/>
                             <constraint firstItem="AGC-P6-2WV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D7d-yn-2Hj"/>
@@ -69,7 +69,7 @@
                             <constraint firstItem="7Xf-Vs-Y4X" firstAttribute="top" secondItem="rgr-cw-9HO" secondAttribute="bottom" constant="8" id="WBt-fc-YGg"/>
                             <constraint firstItem="PO6-3p-6b1" firstAttribute="top" secondItem="AGC-P6-2WV" secondAttribute="bottom" constant="8" id="f5p-wU-THa"/>
                             <constraint firstItem="AGC-P6-2WV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="kRb-7D-98K"/>
-                            <constraint firstItem="AGC-P6-2WV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="xAs-Oa-3lJ"/>
+                            <constraint firstItem="AGC-P6-2WV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="xAs-Oa-3lJ"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="MIc-Zd-jyP" appends="YES" id="fn2-4m-t6L"/>
@@ -88,7 +88,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1830" y="-332"/>
+            <point key="canvasLocation" x="1818" y="-718"/>
         </scene>
         <!--Map-->
         <scene sceneID="DRu-9g-t8V">
@@ -98,7 +98,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bkJ-Eg-lV1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1830" y="400"/>
+            <point key="canvasLocation" x="1818" y="26"/>
+        </scene>
+        <!--Web-->
+        <scene sceneID="2qP-vM-5I7">
+            <objects>
+                <viewController id="nXb-T0-NL2" customClass="WebViewController" customModule="TemperatureConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ekT-fZ-ffh"/>
+                        <viewControllerLayoutGuide type="bottom" id="OLU-7s-Tkk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="erJ-0T-p5A">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9NH-S0-o1y">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9NH-S0-o1y" firstAttribute="leading" secondItem="erJ-0T-p5A" secondAttribute="leading" id="3c6-8l-wSs"/>
+                            <constraint firstAttribute="trailing" secondItem="9NH-S0-o1y" secondAttribute="trailing" id="7ac-vn-nMM"/>
+                            <constraint firstItem="OLU-7s-Tkk" firstAttribute="top" secondItem="9NH-S0-o1y" secondAttribute="bottom" id="Vra-Xn-PUy"/>
+                            <constraint firstItem="9NH-S0-o1y" firstAttribute="top" secondItem="ekT-fZ-ffh" secondAttribute="bottom" id="xwQ-Hj-g7l"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Web" id="fzz-Za-gUK"/>
+                    <connections>
+                        <outlet property="webView" destination="9NH-S0-o1y" id="XgC-YT-qvA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v6K-Ut-mYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1818" y="853"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="lbj-6D-gdu">
@@ -112,6 +146,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="0nY-iq-u5U"/>
                         <segue destination="vbz-1X-i10" kind="relationship" relationship="viewControllers" id="FnC-Af-e2t"/>
+                        <segue destination="nXb-T0-NL2" kind="relationship" relationship="viewControllers" id="CGj-ON-iNx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Bj-1p-K8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
